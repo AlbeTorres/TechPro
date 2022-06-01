@@ -71,6 +71,7 @@ img{
     background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
     background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
 }
 
 
@@ -100,7 +101,6 @@ img{
     font-size: 6rem;
     margin: 0;
     line-height: 1;
-    color: transparent;
 }
 
 .precio-producto span{
@@ -128,6 +128,113 @@ img{
 
 }
 
+/* Sobre-tech */
+.sobre-tech{
+    background-image: linear-gradient( to bottom, transparent 50%, var(--primario) 0% ), url(../img/imagen-mujer.jpg);
+    background-position: right;
+    background-repeat: repeat, no-repeat;
+    background-size: 100%, 110rem;
+}
+
+.sobre-tech-grid{
+    display: grid;
+    grid-template-rows: repeat(2,40rem);
+    row-gap: var(--separacion);
+}
+
+.texto-sobre-tech{
+    grid-row: 2/3;
+    color: var(--blanco);
+    
+    
+}
+
+.texto-sobre-tech h2{
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    letter-spacing: -.2rem;
+
+
+}
+.texto-sobre-tech p{
+    font-size: 2rem;
+    line-height: 2;
+}
+
+/* modelos */
+.modelos{
+    padding: var(--separacion) 0;
+}
+
+.header-modelos{
+    font-size: 6rem;
+    margin-bottom: var(--separacion);
+
+}
+
+.listado-modelos{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.modelo{
+    margin-bottom: 2rem;
+    background-color: var(--grisClaro);
+    color: var(--primario);
+    padding-left: 2rem;
+    border-radius: 2rem;
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.modelo h3{
+    font-size: 2.4rem;
+    margin: 1.5rem 0;
+    
+    
+}
+
+.modelo .precio{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.modelo:first-of-type{
+    margin-bottom: 0;
+}
+
+.modelo-x{
+    background-image: url(../img/modelo-x.svg);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 15rem;
+    
+}
+
+.modelo-y{
+    background-image: url(../img/modelo-y.svg);
+    background-repeat: no-repeat;
+    background-position:90% center;
+    background-size: 15rem;
+    
+}
+
+.modelo-z{
+    background-image: url(../img/modelo-z.svg);
+    background-repeat: no-repeat;
+    background-size: 15rem;
+    background-position: 90% center;
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+.modelo-z .precio{
+    font-size: 6rem;
+}
 
 
 
@@ -156,6 +263,50 @@ img{
     .iconos{
         display: flex;
         gap:2rem;
+    }
+
+    .sobre-tech{
+        background-image: linear-gradient( to left, transparent 50%, var(--primario) 0% ), url(../img/imagen-mujer.jpg);
+        background-size: 100%, 100%;
+    }
+
+    .sobre-tech-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: unset;
+        row-gap: unset;
+        column-gap: 4rem;
+        padding: calc(var(--separacion)*2) 0;
+    }
+
+    .texto-sobre-tech{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .texto-sobre-tech h2{
+        font-size: 4rem;
+        margin-bottom: 5rem;
+        letter-spacing: -.2rem;
+    
+    
+    }
+    .texto-sobre-tech p{
+        font-size: 2rem;
+        line-height: 2;
+    }
+    .listado-modelos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 4rem;
+
+    }
+
+    .modelo-z{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        background-size: 25rem;
     }
 }
 
