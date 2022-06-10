@@ -253,12 +253,16 @@ img{
 
 .contenido-newsletter{
     display: grid;
-    grid-template-rows: repeat(2, 30rem);
-    gap: var(--separacion)
+    grid-template-rows: repeat(2, 38rem);
+    gap: calc(var(--separacion)/2)
 }
 
 .texto-newsletter{
     grid-row: 2/3;
+}
+
+.texto-newsletter h2{
+    margin: 1rem 0;
 }
 
 .formulario input[type="text"]{
@@ -276,6 +280,16 @@ img{
     font-weight: 900;
     border: none;
     cursor: pointer;
+}
+
+/* footer */
+footer p{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    color: var(--primario);
+    padding: 3rem 0;
 }
 
 
